@@ -1,2 +1,2 @@
-# front-end
+# api-cadastro-psicologo
 Repositório do Front-End
