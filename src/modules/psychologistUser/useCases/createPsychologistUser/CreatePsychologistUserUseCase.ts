@@ -21,7 +21,7 @@ export class CreatePsychologistUserUseCase {
         uniques: {
           email,
           crp,
-          cpf, 
+          cpf,
         },
       }
     })
