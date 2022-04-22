@@ -3,7 +3,7 @@ import { AppError } from "../../../../errors/AppError";
 import { prisma } from "../../../../prisma/client";
 
 export class GetOnePsychologistUserUseCase {
-  async execute({ id }): Promise<PsychologistUser>{
+  async execute({ id }: any): Promise<PsychologistUser>{
     const getOnePsychologistUser = await prisma.psychologistUser.findUnique({
       where: {
         id
@@ -11,7 +11,7 @@ export class GetOnePsychologistUserUseCase {
     });
 
     if(!getOnePsychologistUser) {
-      throw new AppError("PsychologistUser do not exists", 400);      
+      throw new AppError("PsychologistUser do not exists", 204);      
     }
 
     return getOnePsychologistUser;
