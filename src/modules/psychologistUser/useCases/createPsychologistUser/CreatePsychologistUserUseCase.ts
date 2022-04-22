@@ -18,7 +18,11 @@ export class CreatePsychologistUserUseCase {
     //verificar se o psychologistUser existe
     const psychologistUserExist = await prisma.psychologistUser.findUnique({
       where: {
-        email
+        uniques: {
+          email,
+          crp,
+          cpf, 
+        },
       }
     })
 

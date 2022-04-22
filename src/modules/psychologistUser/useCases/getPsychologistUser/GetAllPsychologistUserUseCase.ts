@@ -1,5 +1,4 @@
 import { PsychologistUser } from "@prisma/client";
-import { AppError } from "../../../../errors/AppError";
 import { prisma } from "../../../../prisma/client";
 
 export class GetAllPsychologistUserUseCase {
