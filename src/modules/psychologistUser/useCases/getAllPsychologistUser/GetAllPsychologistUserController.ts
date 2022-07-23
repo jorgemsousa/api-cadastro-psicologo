@@ -7,8 +7,8 @@ export class GetAllPsychologistUserController {
     
     const getAllPsychologistUserUseCase = new GetAllPsychologistUserUseCase();
 
-    const result = await getAllPsychologistUserUseCase.execute()
-
+    const result = await getAllPsychologistUserUseCase.execute();
+    
     return res.status(201).json(result);
   }
 }
